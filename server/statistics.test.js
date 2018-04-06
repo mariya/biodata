@@ -1,7 +1,7 @@
 /* global describe, expect, test */
 const statistics = require('./statistics')
 
-describe('Test the statistics module', () => {
+describe('The statistics module', () => {
   test('counts nucleotides', () => {
     const count = statistics.countNucleotides
     const seq = 'TTGTAATCCCAGCTAC'
