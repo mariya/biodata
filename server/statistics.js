@@ -1,11 +1,19 @@
-module.exports = function (seq) {
-  const countInstances = (regex) => (seq.match(regex) || []).length
-  const calculatePercentage = (regex) => (100 * countInstances(regex) / seq.length).toFixed(2)
+const countNucleotides = (seq, nucleotide) => (seq.match(new RegExp(nucleotide, 'g')) || []).length
 
-  let A = calculatePercentage(/A/g)
-  let C = calculatePercentage(/C/g)
-  let G = calculatePercentage(/G/g)
-  let T = calculatePercentage(/T/g)
+const calculate = (seq) => {
+  const PRECISION = 0 // Change this to the number of decimal places desired
+  const calculatePercentage = (nucleotide) =>
+    `${(100 * countNucleotides(seq, nucleotide) / seq.length).toFixed(PRECISION)}%`
+
+  let A = calculatePercentage('A')
+  let C = calculatePercentage('C')
+  let G = calculatePercentage('G')
+  let T = calculatePercentage('T')
 
   return {A, C, G, T}
+}
+
+module.exports = {
+  countNucleotides,
+  calculate
 }

@@ -13,7 +13,7 @@ const STATUS_BAD_REQUEST = 400
 const ensembl = require('../shared/ensembl')
 
 // For calculating statistics
-const calculate = require('./statistics')
+const calculate = require('./statistics').calculate
 
 // This endpoint is simply a proxy to Ensembl;
 // therefore here we use the same structure and
