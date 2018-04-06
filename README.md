@@ -24,7 +24,7 @@ e.g.
 
 ## Server
 A REST server with two endpoints:
-- GET /sequence/region/<species>/<region>
+- GET /sequence/region/:species/:region
 - POST /sequence/statistics
 
 Run:
