@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const args = require('commander')
-const superagent = require('superagent')
+const request = require('request-promise')
 const apiBase = 'http://rest.ensembl.org/sequence/region'
 const regionRegex = /.+:(\d+)?\.\.(\d+)?(:-?1)?$/
 
@@ -29,19 +29,23 @@ if (!region.match(regionRegex)) {
   process.exit(1)
 }
 
-let api = `${apiBase}/${species}/${region}`
-superagent.get(api)
-  .set('Content-Type', 'application/json')
-  .end((err, res) => {
-    if (err) {
-      console.log(`\n  Ensembl API error: '${err}'\n`)
-      process.exit(1)
-    }
+const api = `${apiBase}/${species}/${region}`
+const options = {
+  uri: api,
+  json: true
+}
 
-    if (!res.body || !res.body.seq) {
+request(options)
+  .then(data => {
+    if (!data || !data.seq) {
       console.log('\n  error: could not retrieve sequence from Ensembl API response\n')
       process.exit(1)
     }
 
-    console.log(res.body.seq)
+    // If we have gotten the data, print it out.
+    console.log(data.seq)
+  })
+  .catch(err => {
+    console.log(`\n  Ensembl API error: '${err.message}'\n`)
+    process.exit(1)
   })
