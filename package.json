@@ -1,0 +1,19 @@
+{
+  "name": "biodata",
+  "version": "1.0.0",
+  "description": "Sample REST client and server for processing genomic data.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariya/biodata.git"
+  },
+  "author": "Mariya Lysenkova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariya/biodata/issues"
+  },
+  "homepage": "https://github.com/mariya/biodata#readme"
+}
