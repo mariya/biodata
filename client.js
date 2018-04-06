@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
 const args = require('commander')
-const request = require('request-promise')
-const apiBase = 'http://rest.ensembl.org/sequence/region'
-const regionRegex = /.+:(\d+)?\.\.(\d+)?(:-?1)?$/
+const ensembl = require('./shared/ensembl')
 
 let species, region
 args
@@ -24,18 +22,12 @@ if (!species) {
 }
 
 // Ensure region is correctly formatted.
-if (!region.match(regionRegex)) {
+if (!ensembl.validateRegion) {
   console.log('\n  error: invalid format for `region` (substring definition)\n')
   process.exit(1)
 }
 
-const api = `${apiBase}/${species}/${region}`
-const options = {
-  uri: api,
-  json: true
-}
-
-request(options)
+ensembl.fetchRegion(species, region)
   .then(data => {
     if (!data || !data.seq) {
       console.log('\n  error: could not retrieve sequence from Ensembl API response\n')

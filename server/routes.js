@@ -10,7 +10,7 @@ const STATUS_OK = 200
 const STATUS_BAD_REQUEST = 400
 
 // For proxying requests to Ensembl
-const ensembl = require('./ensembl')
+const ensembl = require('../shared/ensembl')
 
 // For calculating statistics
 const calculate = require('./statistics')
