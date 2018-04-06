@@ -18,7 +18,8 @@
   "homepage": "https://github.com/mariya/biodata#readme",
   "devDependencies": {
     "jest": "^22.4.3",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
