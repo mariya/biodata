@@ -4,7 +4,7 @@
   "description": "Sample REST client and server for processing genomic data.",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "standard && jest"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mariya/biodata#readme",
   "devDependencies": {
+    "jest": "^22.4.3",
     "standard": "^11.0.1"
   }
 }
