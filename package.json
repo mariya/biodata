@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mariya/biodata/issues"
   },
-  "homepage": "https://github.com/mariya/biodata#readme"
+  "homepage": "https://github.com/mariya/biodata#readme",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
 }
