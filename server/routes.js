@@ -10,8 +10,7 @@ const STATUS_OK = 200
 const STATUS_BAD_REQUEST = 400
 
 // For proxying requests to Ensembl
-const request = require('request-promise')
-const ensemblApiBase = 'http://rest.ensembl.org/sequence/region'
+const ensembl = require('./ensembl')
 
 // For calculating statistics
 const calculate = require('./statistics')
@@ -27,16 +26,11 @@ router.get('/region/:species/:region', (req, res) => {
   // so we do not need to test for their existence.
 
   // We should validate the region format, however.
-  if (!region.match(/.+:(\d+)?\.\.(\d+)?(:-?1)?$/)) {
+  if (!ensembl.validateRegion) {
     return res.status(STATUS_BAD_REQUEST).send({ error: 'Invalid region.' })
   }
 
-  const options = {
-    uri: `${ensemblApiBase}/${species}/${region}`,
-    json: true
-  }
-
-  request(options)
+  ensembl.fetchRegion(species, region)
     .then(data => {
       res.status(STATUS_OK).send(data)
     })
