@@ -14,4 +14,10 @@ describe('The ensembl module', () => {
     expect(validate('1000000..1000100:1')).toBeFalsy()
     expect(validate('X:5')).toBeFalsy()
   })
+
+  test('calls ensembl region api', () => {
+    const fetch = ensembl.fetchRegion
+    const req = fetch('human', 'X:1000000..1000100:1')
+    expect(req.uri.href).toBe('http://rest.ensembl.org/sequence/region/human/X:1000000..1000100:1')
+  })
 })
