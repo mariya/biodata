@@ -26,7 +26,7 @@ router.get('/region/:species/:region', (req, res) => {
   // so we do not need to test for their existence.
 
   // We should validate the region format, however.
-  if (!ensembl.validateRegion) {
+  if (!ensembl.validateRegion(region)) {
     return res.status(STATUS_BAD_REQUEST).send({ error: 'Invalid region.' })
   }
 

@@ -22,7 +22,7 @@ if (!species) {
 }
 
 // Ensure region is correctly formatted.
-if (!ensembl.validateRegion) {
+if (!ensembl.validateRegion(region)) {
   console.log('\n  error: invalid format for `region` (substring definition)\n')
   process.exit(1)
 }
