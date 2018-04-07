@@ -29,7 +29,7 @@ A REST server with two endpoints:
 
 Run:
 ```
-./server
+./server.js
 ```
 
 A sequence can be fetched using the same conventions as Ensembl, e.g.
