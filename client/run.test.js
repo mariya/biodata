@@ -1,4 +1,6 @@
 /* global describe, expect, test */
+'use strict'
+
 const run = require('./run')
 
 describe('The client run module', () => {

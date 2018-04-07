@@ -1,3 +1,5 @@
+'use strict'
+
 const args = require('commander')
 const run = require('./client/run')
 

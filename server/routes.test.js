@@ -1,4 +1,6 @@
 /* global describe, expect, test */
+'use strict'
+
 const request = require('supertest')
 const routes = require('./routes')
 

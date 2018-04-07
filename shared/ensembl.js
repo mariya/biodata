@@ -1,3 +1,5 @@
+'use strict'
+
 const request = require('request-promise')
 const ensemblApiBase = 'http://rest.ensembl.org/sequence/region'
 

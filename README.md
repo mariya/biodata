@@ -19,7 +19,7 @@ A simple command-line Node.js script that fetches requested genomic sequences fr
 
 e.g.
 ```
-/usr/local/bin/node client.js human X:1000000..1000100:1
+node client.js human X:1000000..1000100:1
 ```
 
 ## Server
@@ -29,7 +29,7 @@ A REST server with two endpoints:
 
 Run:
 ```
-/usr/local/bin/node server.js
+node server
 ```
 
 A sequence can be fetched using the same conventions as Ensembl, e.g.

@@ -1,3 +1,5 @@
+'use strict'
+
 const app = require('./server/routes')
 
 app.listen(5678, () => {

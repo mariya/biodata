@@ -1,4 +1,6 @@
 /* global describe, expect, test */
+'use strict'
+
 const ensembl = require('./ensembl')
 
 describe('The ensembl module', () => {
