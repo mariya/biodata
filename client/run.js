@@ -1,5 +1,3 @@
-'use strict'
-
 const promise = require('bluebird')
 const ensembl = require('../shared/ensembl')
 

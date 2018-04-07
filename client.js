@@ -1,4 +1,4 @@
-'use strict'
+#!/usr/bin/env node
 
 const args = require('commander')
 const run = require('./client/run')

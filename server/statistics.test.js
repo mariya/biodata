@@ -1,6 +1,4 @@
 /* global describe, expect, test */
-'use strict'
-
 const statistics = require('./statistics')
 
 describe('The statistics module', () => {

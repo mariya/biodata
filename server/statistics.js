@@ -1,5 +1,3 @@
-'use strict'
-
 const countNucleotides = (seq, nucleotide) => (seq.match(new RegExp(nucleotide, 'g')) || []).length
 
 const calculate = (seq) => {
