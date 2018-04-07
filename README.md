@@ -2,7 +2,7 @@
 Sample REST client and server for processing genomic data.
 
 ## Installation
-You will need to have node >= v8.0.0 and npm installed in order to run this code (https://nodejs.org)
+You will need node >= v8.0.0 and npm (https://nodejs.org)
 
 From the root directory of the project, run:
 ```
