@@ -31,8 +31,5 @@ describe('The client run module', () => {
       .then(seq => {
         expect(seq).toMatch(/^[ACGT]+$/)
       })
-      .catch(e => {
-        expect(e).toBeNull()
-      })
   })
 })
