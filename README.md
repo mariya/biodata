@@ -9,7 +9,7 @@ From the root directory of the project, run:
 npm install
 ```
 
-All commands specified below are also to be run from the root directory of the project.
+All commands below are also to be run from the root directory of the project. Note that on some installations you will need to use the "nodejs" binary instead of "node".
 
 ## Client
 A simple command-line Node.js script that fetches requested genomic sequences from the Ensembl API. Run with:
