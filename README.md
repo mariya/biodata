@@ -4,7 +4,7 @@ Sample REST client and server for processing genomic data.
 ## Installation
 You will need to have node and npm installed in order to run this code (https://nodejs.org)
 
-Then from the root directory of the project, run:
+From the root directory of the project, run:
 ```
 npm install
 ```
@@ -14,12 +14,12 @@ All commands specified below are also to be run from the root directory of the p
 ## Client
 A simple command-line Node.js script that fetches requested genomic sequences from the Ensembl API. Run with:
 ```
-./client.js <species> <region>
+/path/to/node client.js <species> <region>
 ```
 
 e.g.
 ```
-./client.js human X:1000000..1000100:1
+/usr/local/bin/node client.js human X:1000000..1000100:1
 ```
 
 ## Server
@@ -29,7 +29,7 @@ A REST server with two endpoints:
 
 Run:
 ```
-./server
+/usr/local/bin/node server.js
 ```
 
 A sequence can be fetched using the same conventions as Ensembl, e.g.

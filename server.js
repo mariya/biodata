@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const app = require('./server/routes')
 
 app.listen(5678, () => {
